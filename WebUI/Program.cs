@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyResumeDB"));
 });
+builder.Services.AddApplicationInsightsTelemetry();
 
 
 var app = builder.Build();

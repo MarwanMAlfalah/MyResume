@@ -127,6 +127,11 @@
                         .Icon("info")
                         .Option("path", GetUrl("/Resume/Education"))
                         .Selected(IsCurrentUrl("/Resume/Education"));
+                    items.Add()
+                        .Text("Skills")
+                        .Icon("info")
+                        .Option("path", GetUrl("/Resume/Skills"))
+                        .Selected(IsCurrentUrl("/Resume/Skills"));
 
                 })
                 .ExpandEvent(TreeViewExpandEvent.Click)

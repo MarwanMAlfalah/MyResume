@@ -1,0 +1,17 @@
+﻿@page
+@{
+    ViewData["Title"] = "Skills";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Skills</h2>
+
+@(Html.DevExtreme().DataGrid<Core.Entities.Skills>()
+     .AutoConfigDataGrid("Skills")
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        columns.AddFor(m => m.SkillType);
+        columns.AddFor(m => m.ProfileId).AutoConfigLookUp("Profile");
+    })
+)
